@@ -1,0 +1,121 @@
+:root {
+  --navbar-color: cyan;
+  --background-color: gray;
+  --navtext-color: red;
+  --navhighlight-color: yellow;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* navigation */
+nav {
+  position: fixed;
+  background: var(--navbar-color);
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: var(--navtext-color);
+}
+
+nav a:hover {
+  color: var(--navhighlight-color);
+}
+
+/* introduction section */
+#welcome-section {
+  margin-top: 10vh;
+  width: 100%;
+  height: 90vh;
+  border: 2px solid red;
+}
+
+.hello-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* project section */
+
+#projects {
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  padding: 20px;
+}
+
+.project-tile {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  border: 2px solid blue;
+}
+
+img {
+  width: 100%;
+  height: 250px;
+}
+
+/* contact section */
+#contact {
+  padding: 10px;
+  border: 2px solid green;
+  text-align: center;
+}
+
+/* media query */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+  }
+
+ img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  section {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}
